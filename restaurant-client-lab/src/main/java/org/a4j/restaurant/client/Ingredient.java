@@ -37,4 +37,10 @@ public class Ingredient {
                 ", quantity=" + quantity +
                 '}';
     }
+
+    public Ingredient(String name, String unit, double quantity) {
+        this.name = name;
+        this.unit = unit;
+        this.quantity = quantity;
+    }
 }

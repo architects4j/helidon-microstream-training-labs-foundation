@@ -1,4 +1,4 @@
-package org.a4j.restaurant.infra;
+package org.a4j.restaurant.client.infra;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;

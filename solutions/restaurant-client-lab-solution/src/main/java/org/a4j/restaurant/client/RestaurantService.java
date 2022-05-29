@@ -1,4 +1,4 @@
-package org.a4j.restaurant;
+package org.a4j.restaurant.client;
 
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
