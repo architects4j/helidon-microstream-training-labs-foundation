@@ -1,4 +1,4 @@
-package org.a4j.restaurant.infra;
+package org.a4j.restaurant.client.infra;
 
 import javax.json.bind.config.PropertyVisibilityStrategy;
 import java.lang.reflect.Field;

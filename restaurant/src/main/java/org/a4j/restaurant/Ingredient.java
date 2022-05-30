@@ -1,6 +1,6 @@
 package org.a4j.restaurant;
 
-import org.a4j.restaurant.infra.FieldPropertyVisibilityStrategy;
+import org.a4j.restaurant.client.infra.FieldPropertyVisibilityStrategy;
 
 import javax.json.bind.annotation.JsonbVisibility;
 
@@ -23,6 +23,12 @@ public class Ingredient {
 
     public double getQuantity() {
         return quantity;
+    }
+
+    public Ingredient(String name, String unit, double quantity) {
+        this.name = name;
+        this.unit = unit;
+        this.quantity = quantity;
     }
 
     @Override

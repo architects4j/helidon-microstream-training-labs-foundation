@@ -1,12 +1,8 @@
-package org.a4j.restaurant;
+package org.a4j.restaurant.client;
 
-import org.a4j.restaurant.infra.FieldPropertyVisibilityStrategy;
-import org.eclipse.microprofile.openapi.annotations.media.Schema;
+import org.a4j.restaurant.client.infra.FieldPropertyVisibilityStrategy;
 
 import javax.json.bind.annotation.JsonbVisibility;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.PositiveOrZero;
-import javax.validation.constraints.Size;
 
 @JsonbVisibility(FieldPropertyVisibilityStrategy.class)
 public class Ingredient {

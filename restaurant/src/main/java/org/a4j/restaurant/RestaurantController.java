@@ -22,8 +22,7 @@ public class RestaurantController {
     /**
      * @Deprecated CDI only
      */
-    RestaurantController() {
-    }
+    RestaurantController() {}
 
     @Inject
     RestaurantController(RestaurantRepository repository) {
@@ -38,7 +37,7 @@ public class RestaurantController {
 
     @GET
     @Path("{id}")
-    public Item findById(@PathParam("id")String id) {
+    public Item findById(@PathParam("id") String id) {
         return this.repository.findById(id).orElseThrow(
                 () -> new WebApplicationException("There is no item with the id " + id, Response.Status.NOT_FOUND));
     }
@@ -66,5 +65,4 @@ public class RestaurantController {
         this.repository.deleteById(id);
         return Response.status(Response.Status.NO_CONTENT).build();
     }
-
 }

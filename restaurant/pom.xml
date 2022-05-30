@@ -12,7 +12,7 @@
     <groupId>org.a4j</groupId>
     <artifactId>restaurant</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <properties>
         <mpVersion>3.3</mpVersion>
         <maven.compiler.target>11</maven.compiler.target>

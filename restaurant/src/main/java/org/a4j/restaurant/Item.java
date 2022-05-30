@@ -1,7 +1,7 @@
 package org.a4j.restaurant;
 
 
-import org.a4j.restaurant.infra.FieldPropertyVisibilityStrategy;
+import org.a4j.restaurant.client.infra.FieldPropertyVisibilityStrategy;
 
 import javax.json.bind.annotation.JsonbVisibility;
 import javax.validation.constraints.Future;
@@ -66,6 +66,14 @@ public class Item {
             return Collections.emptyList();
         }
         return this.ingredients;
+    }
+
+    public Item(String name, String description, ItemType type, LocalDate expires, List<Ingredient> ingredients) {
+        this.name = name;
+        this.description = description;
+        this.type = type;
+        this.expires = expires;
+        this.ingredients = ingredients;
     }
 
     @Override

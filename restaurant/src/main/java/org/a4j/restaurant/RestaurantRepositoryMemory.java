@@ -1,11 +1,9 @@
 package org.a4j.restaurant;
 
 import javax.enterprise.context.ApplicationScoped;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.*;
 import java.util.logging.Logger;
 
 @ApplicationScoped
@@ -17,6 +15,7 @@ class RestaurantRepositoryMemory implements RestaurantRepository {
 
     public RestaurantRepositoryMemory() {
         this.data = new HashMap<>();
+        init();
     }
 
     @Override
@@ -42,4 +41,21 @@ class RestaurantRepositoryMemory implements RestaurantRepository {
     public void deleteById(String id) {
         this.data.remove(id);
     }
+
+    private void init(){
+        Item water = new Item("water",
+                "Water appears as a clear, nontoxic liquid composed of hydrogen and oxygen, essential for life",
+                ItemType.BEVERAGE,
+                LocalDate.now().plus(3l, ChronoUnit.YEARS),
+                List.of(new Ingredient("water","L",2)));
+        Item juice = new Item("juice",
+                "A drink made from the extraction or pressing of the natural liquid contained in fruit and vegetables",
+                ItemType.BEVERAGE,
+                LocalDate.now().plus(3l, ChronoUnit.MONTHS),
+                List.of(new Ingredient("water","L",1),new Ingredient("orange","pcs",2)));
+
+        this.data.put(water.getName(),water);
+        this.data.put(juice.getName(),juice);
+    }
+
 }
