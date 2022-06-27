@@ -12,6 +12,7 @@
         <module>cdi-lab</module>
         <module>restaurant</module>
         <module>restaurant-client-lab</module>
+        <module>acme-store-rest</module>
         <module>solutions/cdi-lab-solution</module>
         <module>solutions/restaurant-client-lab-solution</module>
         <module>solutions/acme-store-rest-solution</module>
