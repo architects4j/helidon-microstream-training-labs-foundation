@@ -9,7 +9,7 @@ import java.util.Collection;
 // Configure resource @Path
 public class ProductResource {
 
-    private Inventory repository;
+    private ProductMicrostreamRepository repository;
 
     /**
      * @Deprecated CDI only
@@ -17,7 +17,7 @@ public class ProductResource {
     ProductResource() {}
 
     @Inject
-    ProductResource(Inventory repository) {
+    ProductResource(ProductMicrostreamRepository repository) {
         this.repository = repository;
     }
 
@@ -29,7 +29,7 @@ public class ProductResource {
      * ** API Responses documentation with @APIResponse, responseCode and decription
       */
       public Collection<Product> getAll() {
-        return repository.getAll();
+        return repository.findAll();
     }
 
     /**

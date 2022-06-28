@@ -21,6 +21,7 @@ import java.util.Collection;
 @Path("products")
 public class ProductResource {
 
+    // TODO: Switch the Inventory with the injection of the new ProductRepository
     private ProductMicrostreamRepository repository;
 
     /**
@@ -28,6 +29,7 @@ public class ProductResource {
      */
     ProductResource() {}
 
+    // TODO: Delete unecessary injection annotation and method
     @Inject
     ProductResource(ProductMicrostreamRepository repository) {
         this.repository = repository;
@@ -38,7 +40,7 @@ public class ProductResource {
     @Operation(summary = "List products", description = "Retrieves all available products")
     @APIResponse(responseCode = "500", description = "Server unavailable")
     @APIResponse(responseCode = "200", description = "Available products' list")
-    public Collection<Product> getAll() {
+    public Collection<Product> findAll() {
         return repository.findAll();
     }
 

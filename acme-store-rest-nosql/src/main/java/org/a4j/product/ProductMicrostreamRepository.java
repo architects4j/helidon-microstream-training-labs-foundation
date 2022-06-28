@@ -8,11 +8,11 @@ import java.util.function.Predicate;
 
 @Storage
 @ApplicationScoped
-public class Inventory {
+public class ProductMicrostreamRepository {
 
     private final Set<Product> products = new HashSet<>();
 
-    public Collection<Product> getAll() {
+    public Collection<Product> findAll() {
         return Collections.unmodifiableSet(this.products);
     }
 
