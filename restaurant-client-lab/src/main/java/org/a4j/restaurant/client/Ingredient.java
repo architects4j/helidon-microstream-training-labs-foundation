@@ -39,4 +39,6 @@ public class Ingredient {
         this.unit = unit;
         this.quantity = quantity;
     }
+
+    public Ingredient(){}
 }
