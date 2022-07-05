@@ -23,21 +23,24 @@ public class RestaurantController {
 
     @GET
     public Collection<Item> getAll() {
-        return service.getAll();
+        return null;
+        //return service.getAll();
     }
 
     @GET
     @Path("{id}")
     @Operation(summary = "Get an item by ID", description = "Retrieves an item by the ID, its name.")
     public Item findById(@PathParam("id") String id) {
-        return service.findById(id);
+        return null;
+        //return service.findById(id);
     }
 
     @POST
     public Response insert(@RequestBody(description = "Create a new Item.",
                                         content = @Content(mediaType = "application/json",
                                         schema = @Schema(implementation = Item.class))) @Valid Item item) {
-        return service.insert(item);
+      //  return service.insert(item);
+        return null;
     }
 
 
@@ -46,14 +49,16 @@ public class RestaurantController {
     public Item update(@PathParam("id") String id, @RequestBody(description = "Create a new Item.",
             content = @Content(mediaType = "application/json",
                     schema = @Schema(implementation = Item.class)))  @Valid Item item) {
-        return service.update(id, item);
+      //  return service.update(id, item);
+        return null;
     }
 
     @DELETE
     @Path("{id}")
     @Operation(summary = "Delete an item by ID", description = "Delete an item by the ID. The item id is its name.")
     public Response delete(@PathParam("id") String id){
-        return service.delete(id);
+        return null;
+        //return service.delete(id);
     }
 
 }
