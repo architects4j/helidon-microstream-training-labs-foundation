@@ -18,7 +18,12 @@ public class ProductMicrostreamRepository {
 
     public Product save(Product product) {
         Objects.requireNonNull(product, "Product is required");
-        this.products.add(product);
+
+        if (!products.add(product)) {
+            deleteById(product.getName());
+            products.add(product);
+        }
+
         return product;
     }
 
