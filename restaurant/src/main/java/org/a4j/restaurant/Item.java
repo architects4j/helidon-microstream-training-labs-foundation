@@ -62,10 +62,13 @@ public class Item {
     }
 
     public List<Ingredient> getIngredients() {
-        if(Objects.isNull(this.ingredients)) {
+        if (Objects.isNull(this.ingredients)) {
             return Collections.emptyList();
         }
         return this.ingredients;
+    }
+
+    public Item() {
     }
 
     public Item(String name, String description, ItemType type, LocalDate expires, List<Ingredient> ingredients) {

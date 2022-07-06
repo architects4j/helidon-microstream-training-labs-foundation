@@ -1,8 +1,6 @@
 package org.a4j.restaurant.client;
 
 
-import org.a4j.restaurant.client.infra.FieldPropertyVisibilityStrategy;
-
 import javax.json.bind.annotation.JsonbVisibility;
 import java.time.LocalDate;
 import java.util.Collections;
@@ -40,7 +38,7 @@ public class Item {
     }
 
     public List<Ingredient> getIngredients() {
-        if(Objects.isNull(this.ingredients)) {
+        if (Objects.isNull(this.ingredients)) {
             return Collections.emptyList();
         }
         return this.ingredients;

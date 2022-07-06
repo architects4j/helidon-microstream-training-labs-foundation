@@ -1,7 +1,5 @@
 package org.a4j.restaurant.client;
 
-import org.a4j.restaurant.client.infra.FieldPropertyVisibilityStrategy;
-
 import javax.json.bind.annotation.JsonbVisibility;
 
 @JsonbVisibility(FieldPropertyVisibilityStrategy.class)
@@ -39,6 +37,4 @@ public class Ingredient {
         this.unit = unit;
         this.quantity = quantity;
     }
-
-    public Ingredient(){}
 }
