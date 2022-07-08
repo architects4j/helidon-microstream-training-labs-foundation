@@ -75,6 +75,19 @@
                         </executions>
                     </plugin>
                     <plugin>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+                            <archive>
+                                <manifest>
+                                    <classpathLayoutType>custom</classpathLayoutType>
+                                    <customClasspathLayout>
+                                        $${artifact.groupId}.$${artifact.artifactId}-$${artifact.version}.$${artifact.extension}
+                                    </customClasspathLayout>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                    <plugin>
                         <groupId>org.jboss.jandex</groupId>
                         <artifactId>jandex-maven-plugin</artifactId>
                         <executions>
